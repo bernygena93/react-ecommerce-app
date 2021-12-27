@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  width: 100%;
+  background-color: var(--color-dark);
+  height: 7vh;
+}
+.inputSearch,
+.inputContainer {
+  background-color: var(--color-dark);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-size: 1.6rem;
+  gap: 3.5rem;
+}
+.inputSearch {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--color-gray);
+  width: 100%;
+}
+.inputContainer {
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+}
+.inputSearch::placeholder {
+  color: var(--color-gray);
+  font-size: 1rem;
+}

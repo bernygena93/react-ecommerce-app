@@ -1,0 +1,32 @@
+/** @format */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  background-color: var(--color-dark);
+  color: var(--color-light-gray);
+  padding: 0% 2%;
+  z-index: 100;
+}
+.nav {
+  display: none;
+  gap: 4%;
+}
+.icon {
+  font-size: 2rem;
+}
+.logo {
+  max-width: 10em;
+}
+
+@media screen and (min-width: 769px) {
+  .nav {
+    display: flex;
+  }
+  .icon {
+    display: none;
+  }
+}

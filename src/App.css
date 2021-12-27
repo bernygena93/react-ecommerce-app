@@ -1,0 +1,19 @@
+/** @format */
+
+* {
+  margin: 0% 0%;
+  padding: 0% 0%;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-light-gray: #e7eff6;
+  --color-gray: #adcbe3;
+  --color-blue: #4b86b4;
+  --color-light-blue: #63ace5;
+  --color-dark: #2a4d69;
+}
+
+body {
+  background-color: var(--color-light-gray);
+}
