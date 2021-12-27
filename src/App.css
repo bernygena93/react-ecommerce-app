@@ -16,4 +16,5 @@
 
 body {
   background-color: var(--color-light-gray);
+  padding: 10vh 0vw;
 }

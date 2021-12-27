@@ -9,7 +9,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function Home() {
   return (
-    <>
+    <div className={styles.container}>
       <Carousel renderThumbs={() => false}>
         <div>
           <img
@@ -30,12 +30,12 @@ export default function Home() {
           />
         </div>
       </Carousel>
+      <h2>Destacados de esta semana</h2>
       <div className={styles.container}>
-        <h2>Destacados de esta semana</h2>
         {listProducts.map((product) => (
           <CardProduct info={product} />
         ))}
       </div>
-    </>
+    </div>
   );
 }

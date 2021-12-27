@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import Facebook from "@material-ui/icons/Facebook";
 import LinkedIn from "@material-ui/icons/LinkedIn";
 import Instagram from "@material-ui/icons/Instagram";
@@ -8,11 +9,16 @@ import styles from "../styles/drawer.module.css";
 
 export default function Drawer({ drawerToggle, drawerOpen }) {
   const activeDrawer = drawerOpen ? styles.drawerOpen : "";
+  const navigate = useNavigate();
 
   const handleClick = () => {
     drawerToggle();
   };
 
+  const handleRedirect = (link) => {
+    drawerToggle();
+    navigate(link);
+  };
   return (
     <div className={`${styles.drawer} ${activeDrawer}`}>
       <div
@@ -26,8 +32,20 @@ export default function Drawer({ drawerToggle, drawerOpen }) {
       </div>
       <nav>
         <ul type="none">
-          <li className={styles.drawerLinks}>Crear cuenta</li>
-          <li className={styles.drawerLinks}>Iniciar sesión</li>
+          <li
+            className={styles.drawerLinks}
+            aria-hidden="true"
+            onClick={() => handleRedirect("/register")}
+          >
+            Crear cuenta
+          </li>
+          <li
+            className={styles.drawerLinks}
+            aria-hidden="true"
+            onClick={() => handleRedirect("/login")}
+          >
+            Iniciar sesión
+          </li>
         </ul>
       </nav>
       <div className={styles.drawerBottom}>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./styles/register.module.css";
 
 export default function Login() {
@@ -6,19 +7,45 @@ export default function Login() {
     email: "",
     password: "",
   });
+  const navigate = useNavigate();
+
+  const handleRedirect = () => {
+    navigate("/register");
+  };
+
+  const handleChange = (event) => {
+    const { name } = event.target;
+    const { value } = event.target;
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("formulario", form);
+  };
 
   return (
     <div className={styles.container}>
       <h2> Ingresar </h2>
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={handleSubmit}>
         <label htmlFor="email">Correo</label>
-        <input id="email" type="email" name="email" value={form.email} />
+        <input
+          id="email"
+          type="email"
+          name="email"
+          value={form.email}
+          onChange={handleChange}
+        />
         <label htmlFor="password">Contraseña</label>
         <input
           id="password"
           type="password"
           name="password"
           value={form.password}
+          onChange={handleChange}
         />
         <button type="submit" className={styles.button}>
           Ingresar
@@ -26,7 +53,9 @@ export default function Login() {
       </form>
       <p>
         ¿Aún no tienes cuenta?
-        <small> Regístrate </small>
+        <small role="button" onClick={handleRedirect} aria-hidden="true">
+          Regístrate
+        </small>
       </p>
     </div>
   );

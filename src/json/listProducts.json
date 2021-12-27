@@ -1,62 +1,92 @@
 [
   {
     "id": 1,
-    "imagen": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
-    "precio": "150050.00",
-    "usuario": "walter",
-    "marca": "Lenovo",
-    "modelo": "ThinkPad T14s 2da Gen (14', Intel)",
-    "cantidad": 5,
-    "descripcion": "Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física."
+    "image": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
+    "price": "150050.00",
+    "user": "walter",
+    "mark": "Lenovo",
+    "model": "ThinkPad T14s 2da Gen (14', Intel)",
+    "stock": 5,
+    "description": "Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física."
   },
   {
     "id": 2,
-    "imagen": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
-    "precio": "50.00",
-    "usuario": "walter",
-    "marca": "Lenovo",
-    "modelo": "linkPad",
-    "cantidad": 5,
-    "descripcion": "asdasdsadadasdddddddddddddddddddddd"
+    "image": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
+    "price": "150050.00",
+    "user": "walter",
+    "mark": "Lenovo",
+    "model": "ThinkPad T14s 2da Gen (14', Intel)",
+    "stock": 5,
+    "description": "Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física."
   },
   {
     "id": 3,
-    "imagen": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
-    "precio": "50.00",
-    "usuario": "walter",
-    "marca": "Lenovo",
-    "modelo": "linkPad",
-    "cantidad": 5,
-    "descripcion": "asdasdsadadasdddddddddddddddddddddd"
+    "image": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
+    "price": "150050.00",
+    "user": "walter",
+    "mark": "Lenovo",
+    "model": "ThinkPad T14s 2da Gen (14', Intel)",
+    "stock": 5,
+    "description": "Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física."
   },
   {
     "id": 4,
-    "imagen": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
-    "precio": "50.00",
-    "usuario": "walter",
-    "marca": "Lenovo",
-    "modelo": "linkPad",
-    "cantidad": 5,
-    "descripcion": "asdasdsadadasdddddddddddddddddddddd"
+    "image": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
+    "price": "150050.00",
+    "user": "walter",
+    "mark": "Lenovo",
+    "model": "ThinkPad T14s 2da Gen (14', Intel)",
+    "stock": 5,
+    "description": "Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física."
   },
   {
     "id": 5,
-    "imagen": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
-    "precio": "50.00",
-    "usuario": "walter",
-    "marca": "Lenovo",
-    "modelo": "linkPad",
-    "cantidad": 5,
-    "descripcion": "asdasdsadadasdddddddddddddddddddddd"
+    "image": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
+    "price": "150050.00",
+    "user": "walter",
+    "mark": "Lenovo",
+    "model": "ThinkPad T14s 2da Gen (14', Intel)",
+    "stock": 5,
+    "description": "Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física."
   },
   {
     "id": 6,
-    "imagen": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
-    "precio": "50.00",
-    "usuario": "walter",
-    "marca": "Lenovo",
-    "modelo": "linkPad",
-    "cantidad": 5,
-    "descripcion": "asdasdsadadasdddddddddddddddddddddd"
+    "image": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
+    "price": "150050.00",
+    "user": "walter",
+    "mark": "Lenovo",
+    "model": "ThinkPad T14s 2da Gen (14', Intel)",
+    "stock": 5,
+    "description": "Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física."
+  },
+  {
+    "id": 7,
+    "image": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
+    "price": "150050.00",
+    "user": "walter",
+    "mark": "Lenovo",
+    "model": "ThinkPad T14s 2da Gen (14', Intel)",
+    "stock": 5,
+    "description": "Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física."
+  },
+  {
+    "id": 8,
+    "image": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
+    "price": "150050.00",
+    "user": "walter",
+    "mark": "Lenovo",
+    "model": "ThinkPad T14s 2da Gen (14', Intel)",
+    "stock": 5,
+    "description": "Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física."
+  },
+  {
+    "id": 9,
+    "image": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
+    "price": "150050.00",
+    "user": "walter",
+    "mark": "Lenovo",
+    "model": "ThinkPad T14s 2da Gen (14', Intel)",
+    "stock": 5,
+    "description": "Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física."
   }
 ]
