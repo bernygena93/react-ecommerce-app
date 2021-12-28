@@ -27,7 +27,7 @@
         "objects": "only-multiline",
         "imports": "never",
         "exports": "never",
-        "functions": "never"
+        "functions": "only-multiline"
       }
     ],
     "jsx-a11y/label-has-associated-control": [

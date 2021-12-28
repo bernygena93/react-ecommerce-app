@@ -33,7 +33,7 @@ export default function Home() {
       <h2>Destacados de esta semana</h2>
       <div className={styles.container}>
         {listProducts.map((product) => (
-          <CardProduct info={product} />
+          <CardProduct key={product.id} info={product} />
         ))}
       </div>
     </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import Add from "@material-ui/icons/Add";
 import Remove from "@material-ui/icons/Remove";
@@ -8,6 +8,16 @@ import listProducts from "../json/listProducts.json";
 import styles from "./styles/detailProducts.module.css";
 
 export default function DetailProduct() {
+  const [count, setCount] = useState(0);
+  const dues = (listProducts[0].price / 12).toFixed(2);
+
+  const countProduct = (op) => {
+    if (op === "remove" && count > 0) {
+      setCount((prevState) => prevState - 1);
+    } else if (op === "add" && count < listProducts[0].stock) {
+      setCount((prevState) => prevState + 1);
+    }
+  };
   return (
     <div className={styles.container}>
       <div className={styles.card}>
@@ -29,20 +39,24 @@ export default function DetailProduct() {
             <h4>{`Stock: ${listProducts[0].stock}`}</h4>
             <div>
               <h1 className={styles.price}>{`$ ${listProducts[0].price}`}</h1>
-              <h4 className={styles.offers}>
-                {`12 x $ ${(listProducts[0].price / 12).toFixed(
-                  2
-                )} sin interes`}
-              </h4>
+              <h4 className={styles.offers}>{`12 x $ ${dues} sin interes`}</h4>
             </div>
           </div>
           <div className={styles.options}>
             <div className={styles.count}>
-              <div className={styles.function}>
+              <div
+                className={styles.function}
+                aria-hidden="true"
+                onClick={() => countProduct("remove")}
+              >
                 <Remove />
               </div>
-              <p className={styles.result}>0</p>
-              <div className={styles.function}>
+              <p className={styles.result}>{count}</p>
+              <div
+                className={styles.function}
+                aria-hidden="true"
+                onClick={() => countProduct("add")}
+              >
                 <Add />
               </div>
             </div>
