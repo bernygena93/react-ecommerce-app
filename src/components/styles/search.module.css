@@ -1,11 +1,8 @@
 .container {
   display: flex;
-  top: 10vh;
-  position: fixed;
   width: 100%;
   background-color: var(--color-dark);
   height: 7vh;
-  z-index: 100;
 }
 .inputSearch,
 .inputContainer {

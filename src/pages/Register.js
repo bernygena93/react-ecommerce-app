@@ -27,7 +27,6 @@ export default function Register() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("formulario", form);
   };
   return (
     <div className={styles.container}>

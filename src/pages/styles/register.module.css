@@ -1,3 +1,7 @@
+.container {
+  min-height: 80vh;
+  margin: 2% 0%;
+}
 .container,
 .form {
   width: 100%;
@@ -6,9 +10,6 @@
   justify-content: center;
   align-items: center;
   gap: 1em;
-}
-.container {
-  margin-top: 5%;
 }
 .form {
   width: 70%;
@@ -33,4 +34,15 @@
   background-color: var(--color-dark);
   color: white;
   font-size: 1.3em;
+}
+
+@media screen and (min-width: 769px) {
+  .form {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .form {
+    width: 35%;
+  }
 }

@@ -1,7 +1,5 @@
 .footer {
   display: flex;
-  position: fixed;
-  bottom: 0%;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -9,7 +7,6 @@
   background-color: var(--color-blue);
   color: var(--color-light-gray);
   padding: 0% 2%;
-  z-index: 100;
 }
 .drawerLinks {
   list-style: none;

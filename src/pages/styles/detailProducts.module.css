@@ -1,14 +1,11 @@
-.container {
-  margin-top: 7vh;
-}
 .containerProduct {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
+  min-height: 80vh;
   gap: 1.5rem;
-  margin: 3% 0%;
 }
 .bodyProduct {
   display: flex;
@@ -69,12 +66,11 @@
   gap: 2rem;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1280px) {
   .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10vh;
     width: 100%;
   }
   .card {
@@ -85,7 +81,7 @@
     background-color: white;
     border-radius: 1rem;
     box-shadow: 0px 2px 2px var(--color-gray);
-    margin-bottom: 2%;
+    margin: 2% 0%;
   }
   .containerProduct {
     width: 45vw;
@@ -106,7 +102,7 @@
   }
   .button {
     height: 5vh;
-    font-size: 1rem;
+    font-size: 0.8rem;
     width: 30rem;
   }
   .count {

@@ -19,13 +19,13 @@ export default function Home() {
         </div>
         <div>
           <img
-            src="https://tecnoreviews.online/wp-content/uploads/2019/10/jogando-games-e1557753239146.jpg"
+            src="https://warehousepc.com.pe/wp-content/uploads/2021/01/arma-tu-pc-gamer-warehouse-peru.jpg"
             alt="Slide 2"
           />
         </div>
         <div>
           <img
-            src="https://solun.tech/wp-content/uploads/2021/02/4.png"
+            src="https://warehousepc.com.pe/wp-content/uploads/2021/01/arma-tu-pc-gamer-warehouse-peru.jpg"
             alt="Slide 3"
           />
         </div>

@@ -24,7 +24,6 @@ export default function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("formulario", form);
   };
 
   return (
@@ -52,7 +51,7 @@ export default function Login() {
         </button>
       </form>
       <p>
-        ¿Aún no tienes cuenta?
+        ¿Aún no tienes cuenta? &nbsp;
         <small role="button" onClick={handleRedirect} aria-hidden="true">
           Regístrate
         </small>
