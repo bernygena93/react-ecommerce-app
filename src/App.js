@@ -5,11 +5,12 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Header/Navbar";
 import "./App.css";
 import Home from "./pages/Home";
-import DetailProduct from "./pages/DetailProduct";
+import ProductDetail from "./pages/ProductDetail";
 import Drawer from "./components/Header/Drawer";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Footer from "./components/Footer/Footer";
+import GlobalState from "./context/GlobalState";
 
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -21,20 +22,22 @@ function App() {
   };
   return (
     <div>
-      <BrowserRouter>
-        <Navbar drawerToggle={drawerToggleClickHandler} />
-        <Drawer
-          drawerToggle={drawerToggleClickHandler}
-          drawerOpen={drawerOpen}
-        />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/detail-product" element={<DetailProduct />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
-        </Routes>
-        <Footer />
-      </BrowserRouter>
+      <GlobalState>
+        <BrowserRouter>
+          <Navbar drawerToggle={drawerToggleClickHandler} />
+          <Drawer
+            drawerToggle={drawerToggleClickHandler}
+            drawerOpen={drawerOpen}
+          />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/product-detail/:id" element={<ProductDetail />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </GlobalState>
     </div>
   );
 }

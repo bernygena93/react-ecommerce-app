@@ -13,6 +13,12 @@
   font-size: 1rem;
   gap: 0.2rem;
 }
+.icons {
+  display: none;
+}
+.categories {
+  display: none;
+}
 .inputSearch {
   color: var(--color-dark);
   background-color: white;
@@ -43,8 +49,9 @@
 
 @media screen and (min-width: 769px) {
   .container {
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    padding: 0% 3%;
   }
   .inputContainer {
     justify-content: center;
@@ -53,5 +60,19 @@
   .inputSearch {
     width: 35vw;
     margin-left: 0%;
+  }
+  .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--color-light-gray);
+  }
+  .categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    color: var(--color-light-gray);
   }
 }

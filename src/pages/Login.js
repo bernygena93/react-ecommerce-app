@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { signIn } from "../service/userService";
 import styles from "./styles/register.module.css";
+import EcommerceContext from "../context/EcommerceContext";
 
 export default function Login() {
   const [form, setForm] = useState({
@@ -8,6 +10,7 @@ export default function Login() {
     password: "",
   });
   const navigate = useNavigate();
+  const context = useContext(EcommerceContext);
 
   const handleRedirect = () => {
     navigate("/register");
@@ -22,8 +25,16 @@ export default function Login() {
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    try {
+      const data = await signIn(form);
+      context.signInUser(data.data.user, data.data.token);
+      navigate("/");
+    } catch (e) {
+      // eslint-disable-next-line no-alert
+      alert("error", e);
+    }
   };
 
   return (

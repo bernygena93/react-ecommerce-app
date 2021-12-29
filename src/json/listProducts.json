@@ -1,92 +1,235 @@
 [
   {
-    "id": 1,
-    "image": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
-    "price": "150050.00",
-    "user": "walter",
-    "mark": "Lenovo",
-    "model": "ThinkPad T14s 2da Gen (14', Intel)",
-    "stock": 5,
-    "description": "Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física."
+    "_id": "61cb55037a3dd03e74e21c83",
+    "make": "Motorola",
+    "model": "G7 Power",
+    "user": "61cb44ed63cbcf20f844e181",
+    "price": 35200,
+    "description": "El Motorola Moto G7 Play es la variante más básica de la serie Moto G7. Con una pantalla HD+ de 5.7 pulgadas, el Moto G7 Play tiene un procesador Snapdragon 632 de ocho núcleos, aunque con sólo 2GB de RAM y 32GB de almacenamiento interno. El Moto G7 Play tiene una cámara trasera de 13 MP, mientras que su cámara frontal es de 8 MP y completa sus características con una batería de 3000 mAh, lector de huellas y Android 9.0 Pie.",
+    "stock": 10,
+    "category": "61cb46a14c68aa3c34f41bf3",
+    "images": [
+      {
+        "_id": "61cb55037a3dd03e74e21c84",
+        "url": "https://i.blogs.es/7dae03/moto-g7-power-6/1366_2000.jpg"
+      },
+      {
+        "_id": "61cb55037a3dd03e74e21c85",
+        "url": "https://i.blogs.es/e79b7a/motorola-moto-g7-power/1366_2000.jpg"
+      },
+      {
+        "_id": "61cb55037a3dd03e74e21c86",
+        "url": "https://i.blogs.es/7dae03/moto-g7-power-6/1366_2000.jpg"
+      },
+      {
+        "_id": "61cb55037a3dd03e74e21c86",
+        "url": "https://http2.mlstatic.com/D_NQ_NP_663063-MLA42074331244_062020-O.webp"
+      },
+      {
+        "_id": "61cb55037a3dd03e74e21c86",
+        "url": "https://http2.mlstatic.com/D_NQ_NP_815501-MLA31622608336_072019-O.webp"
+      }
+    ],
+    "__v": 0
   },
   {
-    "id": 2,
-    "image": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
-    "price": "150050.00",
-    "user": "walter",
-    "mark": "Lenovo",
-    "model": "ThinkPad T14s 2da Gen (14', Intel)",
-    "stock": 5,
-    "description": "Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física."
+    "_id": "61cb64a030ac5e3ab06d484f",
+    "make": "Motorola",
+    "model": "E7 Power",
+    "user": "61cb44ed63cbcf20f844e181",
+    "price": 20200,
+    "description": "req.body.description",
+    "stock": 10,
+    "category": "61cb46a14c68aa3c34f41bf3",
+    "images": [
+      {
+        "_id": "61cb64a030ac5e3ab06d4850",
+        "url": "https://i.blogs.es/3a7c39/captura-de-pantalla-2021-02-19-a-las-8.12.59/450_1000.jpg"
+      },
+      {
+        "_id": "61cb64a030ac5e3ab06d4851",
+        "url": "https://boletin.com.mx/wp-content/uploads/2021/05/moto-e7i-power-770x513.jpg"
+      },
+      {
+        "_id": "61cb64a030ac5e3ab06d4852",
+        "url": "https://mla-s2-p.mlstatic.com/726751-MLA41653730559_052020-O.jpg"
+      }
+    ],
+    "__v": 0
   },
   {
-    "id": 3,
-    "image": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
-    "price": "150050.00",
-    "user": "walter",
-    "mark": "Lenovo",
-    "model": "ThinkPad T14s 2da Gen (14', Intel)",
-    "stock": 5,
-    "description": "Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física."
+    "_id": "61cb653130ac5e3ab06d4854",
+    "make": "Samsung",
+    "model": "A31s",
+    "user": "61cb44ed63cbcf20f844e181",
+    "price": 13200,
+    "description": "req.body.description",
+    "stock": 10,
+    "category": "61cb46a14c68aa3c34f41bf3",
+    "images": [
+      {
+        "_id": "61cb653130ac5e3ab06d4855",
+        "url": "https://i.blogs.es/56c261/galaxy-a31/450_1000.jpg"
+      },
+      {
+        "_id": "61cb653130ac5e3ab06d4856",
+        "url": "https://static.turbosquid.com/Preview/2020/05/08__05_28_50/1w.jpg55C063FB-D4E2-456F-AE42-F895BF2DD7A0Large.jpg"
+      },
+      {
+        "_id": "61cb653130ac5e3ab06d4857",
+        "url": "https://chupacell.com/wp-content/uploads/2020/07/Samsung-Galaxy-A31.jpeg"
+      }
+    ],
+    "__v": 0
   },
   {
-    "id": 4,
-    "image": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
-    "price": "150050.00",
-    "user": "walter",
-    "mark": "Lenovo",
-    "model": "ThinkPad T14s 2da Gen (14', Intel)",
-    "stock": 5,
-    "description": "Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física."
+    "_id": "61cb65e630ac5e3ab06d4859",
+    "make": "Lenovo",
+    "model": "ThinkPad T14",
+    "user": "61cb44ed63cbcf20f844e181",
+    "price": 160200,
+    "description": "req.body.description",
+    "stock": 10,
+    "category": "61cb55cc7a3dd03e74e21c88",
+    "images": [
+      {
+        "_id": "61cb65e630ac5e3ab06d485a",
+        "url": "https://www.notebookcheck.org/typo3temp/_processed_/7/d/csm_lenovo_1_a7d7bc5384.jpg"
+      },
+      {
+        "_id": "61cb65e630ac5e3ab06d485b",
+        "url": "https://m.media-amazon.com/images/I/71pVuk3tdiL._AC_SY355_.jpg"
+      },
+      {
+        "_id": "61cb65e630ac5e3ab06d485c",
+        "url": "https://www.notebookcheck.org/typo3temp/_processed_/4/c/csm_2001849519_a11c13403d.jpg"
+      }
+    ],
+    "__v": 0
   },
   {
-    "id": 5,
-    "image": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
-    "price": "150050.00",
-    "user": "walter",
-    "mark": "Lenovo",
-    "model": "ThinkPad T14s 2da Gen (14', Intel)",
-    "stock": 5,
-    "description": "Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física."
+    "_id": "61cb665030ac5e3ab06d485e",
+    "make": "Lenovo",
+    "model": "ThinkPad T430 I7",
+    "user": "61cb44ed63cbcf20f844e181",
+    "price": 185200,
+    "description": "req.body.description",
+    "stock": 10,
+    "category": "61cb55cc7a3dd03e74e21c88",
+    "images": [
+      {
+        "_id": "61cb665030ac5e3ab06d485f",
+        "url": "https://m.media-amazon.com/images/I/51uM3c1eBZL._AC_SX450_.jpg"
+      },
+      {
+        "_id": "61cb665030ac5e3ab06d4860",
+        "url": "https://www.musicorama.gr/prod_files/mat_original/149982dn1592206745.jpg"
+      },
+      {
+        "_id": "61cb665030ac5e3ab06d4861",
+        "url": "https://www.notebookcheck.org/uploads/tx_nbc2/lenoT430s_2.jpg"
+      }
+    ],
+    "__v": 0
   },
   {
-    "id": 6,
-    "image": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
-    "price": "150050.00",
-    "user": "walter",
-    "mark": "Lenovo",
-    "model": "ThinkPad T14s 2da Gen (14', Intel)",
-    "stock": 5,
-    "description": "Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física."
+    "_id": "61cb674e30ac5e3ab06d4863",
+    "make": "Apple",
+    "model": "MacBook M1",
+    "user": "61cb44ed63cbcf20f844e181",
+    "price": 210200,
+    "description": "req.body.description",
+    "stock": 10,
+    "category": "61cb55cc7a3dd03e74e21c88",
+    "images": [
+      {
+        "_id": "61cb674e30ac5e3ab06d4864",
+        "url": "https://i.blogs.es/bbbcac/macbookpro7/1366_2000.jpg"
+      },
+      {
+        "_id": "61cb674e30ac5e3ab06d4865",
+        "url": "http://s3.amazonaws.com/imagenes-sellers-mercado-ripley/2021/04/14161722/6771.jpg"
+      },
+      {
+        "_id": "61cb674e30ac5e3ab06d4866",
+        "url": "https://m.media-amazon.com/images/I/41C8eAD6VrL._AC_SX466_.jpg"
+      }
+    ],
+    "__v": 0
   },
   {
-    "id": 7,
-    "image": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
-    "price": "150050.00",
-    "user": "walter",
-    "mark": "Lenovo",
-    "model": "ThinkPad T14s 2da Gen (14', Intel)",
-    "stock": 5,
-    "description": "Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física."
+    "_id": "61cb680630ac5e3ab06d4868",
+    "make": "Pc Gamer AMD",
+    "model": "A10 9700 R7",
+    "user": "61cb44ed63cbcf20f844e181",
+    "price": 70200,
+    "description": "req.body.description",
+    "stock": 10,
+    "category": "61cb55dc7a3dd03e74e21c8a",
+    "images": [
+      {
+        "_id": "61cb680630ac5e3ab06d4869",
+        "url": "https://http2.mlstatic.com/D_763530-MLA32272693058_092019-F.webp"
+      },
+      {
+        "_id": "61cb680630ac5e3ab06d486a",
+        "url": "https://www.quonty.com/blog/wp-content/uploads/2020/02/tienda-online-de-informatica-y-tecnologia-14.jpg"
+      },
+      {
+        "_id": "61cb680630ac5e3ab06d486b",
+        "url": "https://http2.mlstatic.com/D_NQ_NP_936303-MLA29645494633_032019-O.jpg"
+      }
+    ],
+    "__v": 0
   },
   {
-    "id": 8,
-    "image": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
-    "price": "150050.00",
-    "user": "walter",
-    "mark": "Lenovo",
-    "model": "ThinkPad T14s 2da Gen (14', Intel)",
-    "stock": 5,
-    "description": "Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física."
+    "_id": "61cb687b30ac5e3ab06d486d",
+    "make": "Pc Gamer Intel",
+    "model": "Core I5-9400",
+    "user": "61cb44ed63cbcf20f844e181",
+    "price": 62600,
+    "description": "req.body.description",
+    "stock": 10,
+    "category": "61cb55dc7a3dd03e74e21c8a",
+    "images": [
+      {
+        "_id": "61cb687b30ac5e3ab06d486e",
+        "url": "https://www.cybermarket.pe/wp-content/uploads/2021/08/Pc-Gamer-2.jpg"
+      },
+      {
+        "_id": "61cb687b30ac5e3ab06d486f",
+        "url": "https://http2.mlstatic.com/D_NQ_NP_636760-MLM45481959098_042021-O.jpg"
+      },
+      {
+        "_id": "61cb687b30ac5e3ab06d4870",
+        "url": "https://blog.soltekonline.com/content/images/2019/08/00000.jpg"
+      }
+    ],
+    "__v": 0
   },
   {
-    "id": 9,
-    "image": "https://static.wikia.nocookie.net/videojuego/images/e/eb/PC_2018.jpg",
-    "price": "150050.00",
-    "user": "walter",
-    "mark": "Lenovo",
-    "model": "ThinkPad T14s 2da Gen (14', Intel)",
-    "stock": 5,
-    "description": "Las características de cada producto pueden variar según el país de adquisición del mismo, por lo que la siguiente descripción no debe ser interpretada como un compromiso contractual. Te invitamos a revisar las características específicas para cada producto antes de realizar la compra online en la sección 'Ver Modelos' de esta misma página, o con un asesor de ventas si es en una tienda física."
+    "_id": "61cb691b30ac5e3ab06d4872",
+    "make": "Pc Gamer AMD",
+    "model": "Ryzen 5 3400g",
+    "user": "61cb44ed63cbcf20f844e181",
+    "price": 90650,
+    "description": "req.body.description",
+    "stock": 10,
+    "category": "61cb55dc7a3dd03e74e21c8a",
+    "images": [
+      {
+        "_id": "61cb691b30ac5e3ab06d4873",
+        "url": "https://http2.mlstatic.com/D_NQ_NP_946386-MLA44217276177_122020-O.jpg"
+      },
+      {
+        "_id": "61cb691b30ac5e3ab06d4874",
+        "url": "https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/Items/PC-Armada-Baja-002_800.jpg"
+      },
+      {
+        "_id": "61cb691b30ac5e3ab06d4875",
+        "url": "https://battler.gg/wp-content/uploads/2021/04/comprar-pc-gamer-2021-battler.jpg"
+      }
+    ],
+    "__v": 0
   }
 ]

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { signUp } from "../service/userService";
 import styles from "./styles/register.module.css";
 
 export default function Register() {
@@ -25,8 +26,15 @@ export default function Register() {
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    try {
+      await signUp(form);
+      navigate("/");
+    } catch (e) {
+      // eslint-disable-next-line no-alert
+      alert("error", e);
+    }
   };
   return (
     <div className={styles.container}>
