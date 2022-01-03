@@ -8,10 +8,14 @@
 
 :root {
   --color-light-gray: #e7eff6;
-  --color-gray: #adcbe3;
-  --color-blue: #4b86b4;
-  --color-light-blue: #63ace5;
-  --color-dark: #2a4d69;
+  --color-medium-gray: #eaeded;
+  --color-gray: #b3cde0;
+  --color-font: #cacfd2;
+  --color-aqua: #6497b1;
+  --color-light-blue: #005b96;
+  --color-blue: #03396c;
+  --color-dark: #011f4b;
+  --color-special: #04eb61;
 }
 
 body {

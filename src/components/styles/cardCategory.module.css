@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 10rem;
+  height: 8rem;
+  background-color: white;
+  border: 1px solid var(--color-medium-gray);
+  color: var(--color-font);
+  border-radius: 0.3rem;
+}
+.container:hover {
+  margin-top: -1%;
+  transition: all 0.3s ease-out;
+  color: var(--color-aqua);
+  border-color: var(--color-aqua);
+}

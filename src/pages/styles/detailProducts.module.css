@@ -66,6 +66,9 @@
 .result {
   font-weight: 700;
 }
+.imgContainer {
+  background-color: white;
+}
 .options {
   width: 100%;
   justify-content: center;

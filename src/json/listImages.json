@@ -1,0 +1,23 @@
+[
+  { "id": 1, "url": "https://i.ibb.co/3yDg2dR/banner-1.jpg" },
+  {
+    "id": 2,
+    "url": "https://i.ibb.co/4FwVJQd/banner-2.jpg"
+  },
+  {
+    "id": 3,
+    "url": "https://i.ibb.co/b3RFHKc/banner-3.jpg"
+  },
+  {
+    "id": 4,
+    "url": "https://i.ibb.co/cxfd6Cm/banner-4.jpg"
+  },
+  {
+    "id": 5,
+    "url": "https://i.ibb.co/N9BKQDr/banner-5.jpg"
+  },
+  {
+    "id": 6,
+    "url": "https://i.ibb.co/RhdTqtW/banner-6.jpg"
+  }
+]

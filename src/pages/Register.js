@@ -41,7 +41,13 @@ export default function Register() {
       <h2> Crear Cuenta </h2>
       <form className={styles.form} onSubmit={handleSubmit}>
         <label htmlFor="name">Nombre</label>
-        <input id="name" type="text" name="name" value={form.name} />
+        <input
+          id="name"
+          type="text"
+          name="name"
+          value={form.name}
+          onChange={handleChange}
+        />
         <label htmlFor="lastname">Apellido</label>
         <input
           id="lastname"
@@ -59,7 +65,13 @@ export default function Register() {
           onChange={handleChange}
         />
         <label htmlFor="email">Correo</label>
-        <input id="email" type="email" name="email" value={form.email} />
+        <input
+          id="email"
+          type="email"
+          name="email"
+          value={form.email}
+          onChange={handleChange}
+        />
         <label htmlFor="password">Contraseña</label>
         <input
           id="password"

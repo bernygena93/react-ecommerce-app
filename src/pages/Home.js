@@ -3,17 +3,21 @@
 import React, { useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
 import styles from "./styles/home.module.css";
-import ProductCard from "../components/Product/ProductCard";
-// import listProducts from "../json/listProducts.json";
+import ProductCard from "../components/Card/ProductCard";
+import listImages from "../json/listImages.json";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { getAllProducts } from "../service/productService";
 import Spinner from "../components/Spinner";
+import { getAllCategories } from "../service/categoryService";
+import CategoryCard from "../components/Card/CategoryCard";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
-    async function fetch() {
+    async function fetchProduct() {
       try {
         const data = await getAllProducts();
         setProducts(data.data);
@@ -22,8 +26,17 @@ export default function Home() {
         console.log("error", e);
       }
     }
-    fetch();
-  }, [products]);
+    async function fetchCategory() {
+      try {
+        const data = await getAllCategories();
+        setCategories(data.data);
+      } catch (e) {
+        console.log("error", e);
+      }
+    }
+    fetchProduct();
+    fetchCategory();
+  }, []);
 
   return (
     // eslint-disable-next-line react/jsx-no-useless-fragment
@@ -35,25 +48,18 @@ export default function Home() {
       ) : (
         <div className={styles.container}>
           <Carousel renderThumbs={() => false}>
-            <div>
-              <img
-                src="https://warehousepc.com.pe/wp-content/uploads/2021/01/arma-tu-pc-gamer-warehouse-peru.jpg"
-                alt="Slide 1"
-              />
-            </div>
-            <div>
-              <img
-                src="https://warehousepc.com.pe/wp-content/uploads/2021/01/arma-tu-pc-gamer-warehouse-peru.jpg"
-                alt="Slide 2"
-              />
-            </div>
-            <div>
-              <img
-                src="https://warehousepc.com.pe/wp-content/uploads/2021/01/arma-tu-pc-gamer-warehouse-peru.jpg"
-                alt="Slide 3"
-              />
-            </div>
+            {listImages.map((image) => (
+              <div key={image.id}>
+                <img src={image.url} alt={`Slide - ${image.id}`} />
+              </div>
+            ))}
           </Carousel>
+          <h2>Categorias</h2>
+          <div className={styles.container}>
+            {categories.map((category) => (
+              <CategoryCard info={category} key={category.id} />
+            ))}
+          </div>
           <h2>Destacados de esta semana</h2>
           <div className={styles.container}>
             {products.map((product) => (

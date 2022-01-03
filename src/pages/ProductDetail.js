@@ -56,7 +56,7 @@ export default function ProductDetail() {
       ) : (
         <div className={styles.container}>
           <div className={styles.card}>
-            <Carousel className={styles.carousel}>
+            <Carousel className={styles.carousel} renderThumbs={() => false}>
               {product.images?.map((image) => (
                 <div>
                   <img className={styles.img} src={image.url} alt="Slide 1" />
@@ -65,16 +65,16 @@ export default function ProductDetail() {
             </Carousel>
             <div className={styles.containerProduct}>
               <div className={styles.bodyProduct}>
-                <p className={styles.make}>{product.make}</p>
-                <p className={styles.model}>{product.model}</p>
-                <p>{product.description}</p>
-                <p>{`Stock: ${product.stock}`}</p>
                 <div>
                   <p className={styles.price}>{`$ ${product.price}`}</p>
                   <p className={styles.offers}>
                     {`12 x $ ${dues} sin interes`}
                   </p>
                 </div>
+                <p className={styles.make}>{product.make}</p>
+                <p className={styles.model}>{product.model}</p>
+                <p>{product.description}</p>
+                <p>{`Stock: ${product.stock}`}</p>
               </div>
               <div className={styles.options}>
                 <div className={styles.count}>
