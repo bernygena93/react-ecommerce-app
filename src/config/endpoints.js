@@ -2,7 +2,7 @@
 export const endpointBase = "http://localhost:8080/";
 
 // Endpoint ==> Cloud
-// export const endpointBase = "https://ecommerce-api-node-express.herokuapp.com/";
+// export const endpointBase = "****************";
 
 //
 export const endpointUser = `${endpointBase}auth/`;

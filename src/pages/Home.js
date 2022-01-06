@@ -1,10 +1,12 @@
 /** @format */
 
 import React, { useEffect, useState } from "react";
-import { Carousel } from "react-responsive-carousel";
+// import { Carousel } from "react-responsive-carousel";
+import Carousel from "react-material-ui-carousel";
 import styles from "./styles/home.module.css";
 import ProductCard from "../components/Card/ProductCard";
 import listImages from "../json/listImages.json";
+import "react-multi-carousel/lib/styles.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { getAllProducts } from "../service/productService";
 import Spinner from "../components/Spinner";
@@ -47,7 +49,7 @@ export default function Home() {
         </div>
       ) : (
         <div className={styles.container}>
-          <Carousel renderThumbs={() => false}>
+          <Carousel>
             {listImages.map((image) => (
               <div key={image.id}>
                 <img src={image.url} alt={`Slide - ${image.id}`} />

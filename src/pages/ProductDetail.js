@@ -1,15 +1,21 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 import Add from "@material-ui/icons/Add";
 import Remove from "@material-ui/icons/Remove";
 import AddShoppingCart from "@material-ui/icons/AddShoppingCart";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Favorite } from "@material-ui/icons";
+import { Rating } from "react-simple-star-rating";
 // import listProducts from "../json/listProducts.json";
 import styles from "./styles/detailProducts.module.css";
 import EcommerceContext from "../context/EcommerceContext";
 import { getProductById } from "../service/productService";
 import Spinner from "../components/Spinner";
+import ProductWarranty from "../components/Product/ProductWarranty";
+import ProductDescription from "../components/Product/ProductDescription";
+import ProductInfo from "../components/Product/ProductInfo";
+import usePaymentFormat from "../hooks/usePaymentFormat";
 
 export default function ProductDetail() {
   const [loading, setLoading] = useState(true);
@@ -18,7 +24,7 @@ export default function ProductDetail() {
   const [product, setProduct] = useState({});
   const [count, setCount] = useState(0);
   const { id } = useParams();
-  const dues = (product.price / 12).toFixed(2);
+  const price = usePaymentFormat(product.price);
 
   useEffect(() => {
     async function fetch() {
@@ -56,26 +62,28 @@ export default function ProductDetail() {
       ) : (
         <div className={styles.container}>
           <div className={styles.card}>
-            <Carousel className={styles.carousel} renderThumbs={() => false}>
-              {product.images?.map((image) => (
-                <div>
-                  <img className={styles.img} src={image.url} alt="Slide 1" />
-                </div>
-              ))}
-            </Carousel>
-            <div className={styles.containerProduct}>
-              <div className={styles.bodyProduct}>
-                <div>
-                  <p className={styles.price}>{`$ ${product.price}`}</p>
-                  <p className={styles.offers}>
-                    {`12 x $ ${dues} sin interes`}
-                  </p>
-                </div>
-                <p className={styles.make}>{product.make}</p>
-                <p className={styles.model}>{product.model}</p>
-                <p>{product.description}</p>
-                <p>{`Stock: ${product.stock}`}</p>
+            <div className={styles.productHeader}>
+              <p className={styles.make}>
+                {`${product.make} - ${product.model}`}
+                <Favorite />
+              </p>
+              <div className={styles.rating}>
+                <Rating size={16} initialValue={product.rating} readonly />
               </div>
+              <Carousel className={styles.carousel}>
+                {product.images?.map((image) => (
+                  <div key={image.id}>
+                    <img className={styles.img} src={image.url} alt="Slide 1" />
+                  </div>
+                ))}
+              </Carousel>
+              {window.innerWidth > 1279 && (
+                <ProductDescription product={product} />
+              )}
+            </div>
+            <div className={styles.containerProduct}>
+              <p className={styles.price}>{price}</p>
+              <ProductInfo product={product} />
               <div className={styles.options}>
                 <div className={styles.count}>
                   <div
@@ -98,6 +106,10 @@ export default function ProductDetail() {
                   <AddShoppingCart onClick={handleShopping} />
                   Agregar al carrito
                 </button>
+                <ProductWarranty />
+                {window.innerWidth < 1280 && (
+                  <ProductDescription product={product} />
+                )}
               </div>
             </div>
           </div>

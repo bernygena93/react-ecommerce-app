@@ -2,6 +2,7 @@ import Favorite from "@material-ui/icons/Favorite";
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import EcommerceContext from "../../context/EcommerceContext";
+import usePaymentFormat from "../../hooks/usePaymentFormat";
 import styles from "../styles/cardProduct.module.css";
 
 export default function ProductCard({ info }) {
@@ -17,6 +18,8 @@ export default function ProductCard({ info }) {
       setStyleIcon(styles.icon);
     }
   };
+  const price = usePaymentFormat(info.price);
+  const due = usePaymentFormat(info.price / 12);
 
   const viewDetail = () => {
     // eslint-disable-next-line no-underscore-dangle
@@ -32,12 +35,9 @@ export default function ProductCard({ info }) {
           <img src={info.images[0].url} alt="" />
         </div>
         <div className={styles.bodyCard}>
-          <p>{info.make}</p>
           <p className={styles.info}>{info.model}</p>
-          <p className={styles.price}>{`$ ${info.price}`}</p>
-          <small className={styles.offers}>
-            {`12 x ${(info.price / 12).toFixed(2)} sin interes`}
-          </small>
+          <p className={styles.price}>{price}</p>
+          <small className={styles.offers}>{`12 x ${due} sin interes`}</small>
           <small>Envio gratis</small>
         </div>
       </div>

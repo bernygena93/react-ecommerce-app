@@ -1,16 +1,22 @@
 /** @format */
+@font-face {
+  font-family: "Proxima-Nova";
+  src: url(./assets/fonts/Proxima\ Nova\ Font.otf);
+}
 
 * {
   margin: 0% 0%;
   padding: 0% 0%;
   box-sizing: border-box;
+  font-family: "Proxima-Nova";
 }
 
 :root {
   --color-light-gray: #e7eff6;
   --color-medium-gray: #eaeded;
   --color-gray: #b3cde0;
-  --color-font: #cacfd2;
+  --color-font: #b6bbbe;
+  --color-font-dark: #74787a;
   --color-aqua: #6497b1;
   --color-light-blue: #005b96;
   --color-blue: #03396c;
