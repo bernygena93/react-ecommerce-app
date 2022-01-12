@@ -1,8 +1,7 @@
 /** @format */
 
 import React, { useEffect, useState } from "react";
-// import { Carousel } from "react-responsive-carousel";
-import Carousel from "react-material-ui-carousel";
+import { Carousel as Carousel2 } from "react-responsive-carousel";
 import styles from "./styles/home.module.css";
 import ProductCard from "../components/Card/ProductCard";
 import listImages from "../json/listImages.json";
@@ -12,33 +11,26 @@ import { getAllProducts } from "../service/productService";
 import Spinner from "../components/Spinner";
 import { getAllCategories } from "../service/categoryService";
 import CategoryCard from "../components/Card/CategoryCard";
+import InfoHome from "../components/InfoHome";
+import BrandsCard from "../components/Card/BrandsCard";
+import { getAllBrands } from "../service/brandsService";
+import useFetchApi from "../hooks/useFetchApi";
+import MultiCarousel from "../components/MultiCarousel";
 
 export default function Home() {
-  const [products, setProducts] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [loading, setLoading] = useState(false);
-
+  const products = useFetchApi({
+    urlApi: getAllProducts,
+  });
+  const categories = useFetchApi({
+    urlApi: getAllCategories,
+  });
+  const brands = useFetchApi({
+    urlApi: getAllBrands,
+  });
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    async function fetchProduct() {
-      try {
-        const data = await getAllProducts();
-        setProducts(data.data);
-        setLoading(false);
-      } catch (e) {
-        console.log("error", e);
-      }
-    }
-    async function fetchCategory() {
-      try {
-        const data = await getAllCategories();
-        setCategories(data.data);
-      } catch (e) {
-        console.log("error", e);
-      }
-    }
-    fetchProduct();
-    fetchCategory();
-  }, []);
+    if (products) setLoading(false);
+  }, [products]);
 
   return (
     // eslint-disable-next-line react/jsx-no-useless-fragment
@@ -49,25 +41,42 @@ export default function Home() {
         </div>
       ) : (
         <div className={styles.container}>
-          <Carousel>
+          <Carousel2 renderThumbs={() => false}>
             {listImages.map((image) => (
               <div key={image.id}>
                 <img src={image.url} alt={`Slide - ${image.id}`} />
               </div>
             ))}
-          </Carousel>
+          </Carousel2>
+          <InfoHome />
+          <h2>Destacados de esta semana</h2>
+          <MultiCarousel>
+            {products.map((product) => (
+              <ProductCard key={product.id} info={product} />
+            ))}
+          </MultiCarousel>
           <h2>Categorias</h2>
           <div className={styles.container}>
             {categories.map((category) => (
               <CategoryCard info={category} key={category.id} />
             ))}
           </div>
-          <h2>Destacados de esta semana</h2>
-          <div className={styles.container}>
-            {products.map((product) => (
-              <ProductCard key={product.id} info={product} />
+          <h2>Marcas Oficiales</h2>
+          <MultiCarousel>
+            {brands.map((brand) => (
+              <BrandsCard brand={brand} key={brand.id} />
             ))}
-          </div>
+          </MultiCarousel>
+          <h2>Envio Gratis</h2>
+          <MultiCarousel>
+            {products.map(
+              (product) =>
+                // eslint-disable-next-line implicit-arrow-linebreak
+                product.shipping && (
+                  <ProductCard key={product.id} info={product} />
+                )
+            )}
+          </MultiCarousel>
         </div>
       )}
     </>

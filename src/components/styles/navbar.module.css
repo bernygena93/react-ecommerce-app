@@ -6,13 +6,7 @@
   align-items: center;
   width: 100%;
   height: 11vh;
-  background: rgb(1, 31, 75);
-  background: linear-gradient(
-    121deg,
-    rgba(1, 31, 75, 1) 31%,
-    rgba(3, 57, 108, 1) 100%
-  );
-
+  background-color: var(--color-dark);
   color: var(--color-light-gray);
   border: 1px solid var(--color-dark);
   gap: 4%;
@@ -21,6 +15,26 @@
 .navbar2 {
   height: 6vh;
   font-size: 0.9rem;
+}
+.optionNavbar {
+  height: 6vh;
+  cursor: pointer;
+  position: relative;
+}
+.optionNavbar::before {
+  content: "";
+  background-color: var(--color-light-aqua);
+  display: block;
+  width: 0%;
+  height: 5%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transition: all ease 0.4s;
+}
+.optionNavbar:hover::before {
+  width: 100%;
+  left: 0%;
 }
 p {
   display: flex;
@@ -47,6 +61,7 @@ p {
   display: none;
 }
 .logoMobile {
+  cursor: pointer;
   display: flex;
   max-width: 3em;
 }
@@ -61,7 +76,16 @@ p {
     display: flex;
     align-items: center;
     width: 30%;
-    gap: 5%;
+    gap: 20%;
+  }
+  .buttonNav {
+    padding: 0.5rem 0.5rem;
+    transition: all ease 0.2s;
+  }
+  .buttonNav:hover {
+    border-radius: 0.2rem;
+    background-color: var(--color-blue-aqua);
+    cursor: pointer;
   }
   .icon {
     display: none;
@@ -74,6 +98,7 @@ p {
     color: var(--color-light-gray);
   }
   .logo {
+    cursor: pointer;
     display: flex;
     max-width: 6em;
   }

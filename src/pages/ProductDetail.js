@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
@@ -7,7 +6,6 @@ import Remove from "@material-ui/icons/Remove";
 import AddShoppingCart from "@material-ui/icons/AddShoppingCart";
 import { Favorite } from "@material-ui/icons";
 import { Rating } from "react-simple-star-rating";
-// import listProducts from "../json/listProducts.json";
 import styles from "./styles/detailProducts.module.css";
 import EcommerceContext from "../context/EcommerceContext";
 import { getProductById } from "../service/productService";
@@ -16,29 +14,23 @@ import ProductWarranty from "../components/Product/ProductWarranty";
 import ProductDescription from "../components/Product/ProductDescription";
 import ProductInfo from "../components/Product/ProductInfo";
 import usePaymentFormat from "../hooks/usePaymentFormat";
+import useFetchApi from "../hooks/useFetchApi";
 
 export default function ProductDetail() {
   const [loading, setLoading] = useState(true);
   const context = useContext(EcommerceContext);
   // eslint-disable-next-line object-curly-newline
-  const [product, setProduct] = useState({});
   const [count, setCount] = useState(0);
   const { id } = useParams();
+  const product = useFetchApi({
+    urlApi: getProductById,
+    payload: id,
+  });
   const price = usePaymentFormat(product.price);
 
   useEffect(() => {
-    async function fetch() {
-      try {
-        const data = await getProductById(id);
-        setProduct(data.data);
-        setLoading(false);
-        console.log(product);
-      } catch (e) {
-        console.log("error", e);
-      }
-    }
-    fetch();
-  }, [id]);
+    if (product) setLoading(false);
+  }, [product]);
 
   const countProduct = (op) => {
     if (op === "remove" && count > 0) {
