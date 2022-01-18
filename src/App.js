@@ -11,6 +11,8 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Footer from "./components/Footer/Footer";
 import GlobalState from "./context/GlobalState";
+import ProductsFiltered from "./pages/ProductsFiltered";
+import ShoppingCart from "./pages/ShoppingCart";
 
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -34,6 +36,11 @@ function App() {
             <Route path="/product-detail/:id" element={<ProductDetail />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
+            <Route
+              path="/filtered/:type/:name/:id"
+              element={<ProductsFiltered />}
+            />
+            <Route path="/shopping-cart" element={<ShoppingCart />} />
           </Routes>
           <Footer />
         </BrowserRouter>

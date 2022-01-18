@@ -1,9 +1,20 @@
 import React from "react";
+import { useNavigate } from "react-router";
 import styles from "../styles/brandsCard.module.css";
 
 export default function BrandsCard({ brand }) {
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate(`/filtered/brand/${brand.name}/${brand._id}`);
+  };
+
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      aria-hidden="true"
+      onClick={handleNavigate}
+    >
       <div className={styles.header}>
         <p>{brand.name}</p>
         <small>Ver Mas</small>

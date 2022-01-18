@@ -43,7 +43,7 @@ export default function Home() {
         <div className={styles.container}>
           <Carousel2 renderThumbs={() => false}>
             {listImages.map((image) => (
-              <div key={image.id}>
+              <div key={image.id + image.url}>
                 <img src={image.url} alt={`Slide - ${image.id}`} />
               </div>
             ))}
@@ -52,19 +52,19 @@ export default function Home() {
           <h2>Destacados de esta semana</h2>
           <MultiCarousel>
             {products.map((product) => (
-              <ProductCard key={product.id} info={product} />
+              <ProductCard key={product.id + product.brand} info={product} />
             ))}
           </MultiCarousel>
           <h2>Categorias</h2>
           <div className={styles.container}>
             {categories.map((category) => (
-              <CategoryCard info={category} key={category.id} />
+              <CategoryCard info={category} key={category.id + category.name} />
             ))}
           </div>
           <h2>Marcas Oficiales</h2>
           <MultiCarousel>
             {brands.map((brand) => (
-              <BrandsCard brand={brand} key={brand.id} />
+              <BrandsCard brand={brand} key={brand.id + brand.name} />
             ))}
           </MultiCarousel>
           <h2>Envio Gratis</h2>
@@ -73,7 +73,7 @@ export default function Home() {
               (product) =>
                 // eslint-disable-next-line implicit-arrow-linebreak
                 product.shipping && (
-                  <ProductCard key={product.id} info={product} />
+                  <ProductCard key={product.id + product.name} info={product} />
                 )
             )}
           </MultiCarousel>

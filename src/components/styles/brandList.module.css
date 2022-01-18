@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+  gap: 0.5rem;
+}
+.name {
+  color: var(--color-font);
+  font-weight: 500;
+}

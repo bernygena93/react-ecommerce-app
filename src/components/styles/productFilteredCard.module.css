@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-ligh-gray);
+  border-radius: 0.2rem;
+  height: 7rem;
+  width: 95%;
+  padding: 0.5rem 0.5rem;
+  color: var(--color-font);
+  cursor: pointer;
+}
+
+.imgContainer {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 60%;
+}
+.imgContainer img {
+  height: 100%;
+}
+.shipping {
+  color: var(--color-special);
+}
+.model {
+  height: 2rem;
+  overflow: hidden;
+}
+.price {
+  color: var(--color-font-dark);
+  font-weight: 500;
+  font-size: 1.5em;
+}
+.button {
+  border: none;
+  border-radius: 0.2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  width: 80%;
+  height: 5vh;
+  color: white;
+  background-color: var(--color-blue-aqua);
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    height: 10rem;
+  }
+  .priceContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+  }
+  .imgContainer {
+    width: 30%;
+  }
+  .infoContainer {
+    width: 40%;
+  }
+}

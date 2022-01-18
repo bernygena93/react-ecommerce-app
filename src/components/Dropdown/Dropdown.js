@@ -1,7 +1,7 @@
 import styles from "../styles/dropdown.module.css";
 import Items from "./Items";
 
-export default function Dropdown({ items, visible, setVisible }) {
+export default function Dropdown({ items, visible, setVisible, position }) {
   const styleDropdown = visible ? styles.containerView : styles.container;
 
   const handleVisible = () => {
@@ -9,9 +9,20 @@ export default function Dropdown({ items, visible, setVisible }) {
   };
 
   return (
-    <div className={styleDropdown}>
+    <div
+      className={styleDropdown}
+      style={{
+        top: `${position.top}%`,
+        left: `${position.left}%`,
+      }}
+    >
       {items.map((item) => (
-        <div className={styles.item} aria-hidden="true" onClick={handleVisible}>
+        <div
+          key={item.path + item.text}
+          className={styles.item}
+          aria-hidden="true"
+          onClick={handleVisible}
+        >
           <Items option={item.text} path={item.path} />
         </div>
       ))}

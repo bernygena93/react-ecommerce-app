@@ -1,0 +1,21 @@
+.container {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  min-height: 80vh;
+  gap: 0.3rem;
+}
+
+.totalContainer {
+  width: 90%;
+  height: 5vh;
+  padding: 0rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-blue-aqua);
+  color: var(--color-white);
+}
