@@ -46,6 +46,7 @@
       }
     ],
     "linebreak-style": 0,
+    "operator-linebreak": [2, "before", { "overrides": { "=": "after" } }],
     "quotes": [2, "double", { "avoidEscape": true }],
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",

@@ -29,7 +29,10 @@ export default function Login() {
     event.preventDefault();
     try {
       const data = await signIn(form);
-      context.signInUser(data.data.user, data.data.token);
+      context.signInUser({
+        data: data.data.user,
+        token: data.data.token,
+      });
       navigate("/");
     } catch (e) {
       // eslint-disable-next-line no-alert

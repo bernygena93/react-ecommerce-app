@@ -1,6 +1,6 @@
 import { CheckCircle } from "@material-ui/icons";
 import React from "react";
-import styles from "../../pages/styles/detailProducts.module.css";
+import styles from "../../pages/styles/productDetail.module.css";
 import PaymentMethods from "./PaymentMethods";
 import ProductShipping from "./ProductShipping";
 

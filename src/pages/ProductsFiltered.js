@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { useParams } from "react-router";
 import BrandList from "../components/BrandList";
 import ProductFilteredCard from "../components/Card/ProductFilteredCard";
@@ -35,7 +34,7 @@ export default function ProductsFiltered() {
           </p>
         </div>
         <div className={styles.orderContainer}>
-          <ProductOrdering />
+          <ProductOrdering products={products} />
         </div>
         <div className={styles.brandContainer}>
           <p className={styles.name}>Marcas</p>

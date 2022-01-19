@@ -1,6 +1,6 @@
 import React from "react";
 import VerifiedUserIcon from "@material-ui/icons/VerifiedUser";
-import styles from "../../pages/styles/detailProducts.module.css";
+import styles from "../../pages/styles/productDetail.module.css";
 
 export default function ProductWarranty() {
   return (

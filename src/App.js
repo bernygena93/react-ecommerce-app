@@ -13,6 +13,7 @@ import Footer from "./components/Footer/Footer";
 import GlobalState from "./context/GlobalState";
 import ProductsFiltered from "./pages/ProductsFiltered";
 import ShoppingCart from "./pages/ShoppingCart";
+import FavoritesProducts from "./pages/FavoritesProducts";
 
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -41,6 +42,7 @@ function App() {
               element={<ProductsFiltered />}
             />
             <Route path="/shopping-cart" element={<ShoppingCart />} />
+            <Route path="/favorites" element={<FavoritesProducts />} />
           </Routes>
           <Footer />
         </BrowserRouter>

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CreditCard from "@material-ui/icons/CreditCard";
-import styles from "../../pages/styles/detailProducts.module.css";
+import styles from "../../pages/styles/productDetail.module.css";
 import { arsPaymentFormat } from "../../utils/functions/formatNumber";
 
 export default function PaymentMethods({ product }) {

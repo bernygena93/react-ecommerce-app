@@ -1,60 +1,61 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo } from "react";
+import useLocalStorage from "../hooks/useLocalStorage";
 import EcommerceContext from "./EcommerceContext";
 
 function GlobalState({ children }) {
-  const [userInfo, setUserInfo] = useState(
-    JSON.parse(localStorage.getItem("User"))
+  const [userInfo, setUserInfo, cleanUserInfo] = useLocalStorage("User");
+  const [favorites, setFavorites, cleanFavorites] =
+    useLocalStorage("Favorites");
+  const [shopping, setShopping, cleanShopping] = useLocalStorage("Shopping");
+
+  const signInUser = useCallback(
+    (info) => {
+      setUserInfo([info.data, info.token]);
+      setFavorites([]);
+      setShopping([]);
+    },
+    [setUserInfo, setFavorites, setShopping]
   );
 
-  const [favoritesList, setFavoritesList] = useState(
-    JSON.parse(localStorage.getItem("Favorites"))
-  );
-  const [shopping, setShopping] = useState(
-    JSON.parse(localStorage.getItem("Shopping"))
-  );
-
-  const signInUser = (info, token) => {
-    setUserInfo(info);
-    localStorage.setItem("User", JSON.stringify([info, token]));
-  };
-
-  const logoutUser = () => {
-    setUserInfo(null);
-    localStorage.removeItem("User");
-  };
+  const logoutUser = useCallback(() => {
+    cleanUserInfo("User");
+    cleanFavorites("Favorites");
+    cleanShopping("Shopping");
+  }, [cleanUserInfo, cleanFavorites, cleanShopping]);
 
   const addToCart = useCallback(
     (product) => {
       setShopping([...shopping, product]);
     },
-    [shopping]
+    [shopping, setShopping]
   );
 
   const removeToCart = useCallback(
-    (product) => {
-      setShopping(shopping.filter((shoping) => shoping._id !== product._id));
+    (id) => {
+      setShopping(shopping.filter((item) => item.product._id !== id));
     },
-    [shopping]
+    [setShopping, shopping]
   );
+
   const addFavorites = useCallback(
     (product) => {
-      setFavoritesList([...favoritesList, product]);
+      setFavorites([...favorites, product]);
     },
-    [favoritesList]
+    [favorites, setFavorites]
   );
 
   const removeFavorites = useCallback(
-    (product) => {
-      setFavoritesList(
-        favoritesList.filter((favorite) => favorite._id !== product._id)
-      );
+    (id) => {
+      setFavorites(favorites.filter((favorite) => favorite.product._id !== id));
     },
-    [favoritesList]
+    [favorites, setFavorites]
   );
 
   const value = useMemo(
     () => ({
       userInfo,
+      favorites,
+      shopping,
       signInUser,
       logoutUser,
       addToCart,
@@ -62,18 +63,22 @@ function GlobalState({ children }) {
       addFavorites,
       removeFavorites,
     }),
-    [userInfo, addToCart, removeToCart, addFavorites, removeFavorites]
+    [
+      userInfo,
+      favorites,
+      shopping,
+      signInUser,
+      logoutUser,
+      removeFavorites,
+      addToCart,
+      removeToCart,
+      addFavorites,
+    ]
   );
 
   useEffect(() => {
-    if (shopping) localStorage.setItem("Shopping", JSON.stringify(shopping));
+    localStorage.setItem("Shopping", JSON.stringify(shopping));
   }, [shopping]);
-
-  useEffect(() => {
-    if (favoritesList) {
-      localStorage.setItem("Favorites", JSON.stringify(favoritesList));
-    }
-  }, [favoritesList]);
 
   return (
     <EcommerceContext.Provider value={value}>

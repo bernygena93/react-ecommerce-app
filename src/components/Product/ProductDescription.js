@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../pages/styles/detailProducts.module.css";
+import styles from "../../pages/styles/productDetail.module.css";
 
 export default function ProductDescription({ product }) {
   return (

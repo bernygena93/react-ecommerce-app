@@ -11,7 +11,7 @@ export default function UserMenu({ redirect }) {
   return (
     <div className={styles.icons} ref={ref} aria-hidden="true">
       <ShoppingCartOutlined onClick={() => redirect("/shopping-cart")} />
-      <Favorite />
+      <Favorite onClick={() => redirect("/favorites")} />
       <KeyboardArrowDown onClick={() => setIsVisible(!isVisible)} />
       <Dropdown
         position={{

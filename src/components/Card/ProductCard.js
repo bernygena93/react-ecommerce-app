@@ -3,26 +3,29 @@ import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import EcommerceContext from "../../context/EcommerceContext";
 import { arsPaymentFormat } from "../../utils/functions/formatNumber";
-import styles from "../styles/cardProduct.module.css";
+import styles from "../styles/productCard.module.css";
 
 export default function ProductCard({ info }) {
   const context = useContext(EcommerceContext);
   const [styleIcon, setStyleIcon] = useState(styles.icon);
   const navigate = useNavigate();
-  const handleFavorites = () => {
-    if (styleIcon === styles.icon) {
-      context.addFavorites(info);
-      setStyleIcon(styles.iconSelected);
-    } else if (styleIcon === styles.iconSelected) {
-      context.removeFavorites(info);
-      setStyleIcon(styles.icon);
-    }
-  };
   const [price, setPrice] = useState(0);
   const [amountPayment, setAmountPayment] = useState(0);
 
+  const handleFavorites = () => {
+    if (styleIcon === styles.icon) {
+      context.addFavorites({
+        product: info,
+        amount: 1,
+      });
+      setStyleIcon(styles.iconSelected);
+    } else if (styleIcon === styles.iconSelected) {
+      context.removeFavorites(info._id);
+      setStyleIcon(styles.icon);
+    }
+  };
+
   const viewDetail = () => {
-    // eslint-disable-next-line no-underscore-dangle
     navigate(`/product-detail/${info._id}`);
   };
 
@@ -32,11 +35,11 @@ export default function ProductCard({ info }) {
   }, [info]);
 
   return (
-    <div>
-      <div className={styles.container} aria-hidden="true" onClick={viewDetail}>
-        <div className={styleIcon}>
-          <Favorite onClick={handleFavorites} />
-        </div>
+    <div className={styles.container}>
+      <div className={styles.icon}>
+        <Favorite onClick={handleFavorites} />
+      </div>
+      <div className={styles.containerProduct} aria-hidden onClick={viewDetail}>
         <div className={styles.headerCard}>
           <img src={info.images[0].url} alt="" />
         </div>

@@ -73,9 +73,9 @@ export default function Navbar({ drawerToggle }) {
                   <nav className={styles.nav}>
                     <AccountCircle />
                     <p>
-                      {context.userInfo.name}
+                      {context.userInfo[0].name}
                       &nbsp;
-                      {context.userInfo.lastname}
+                      {context.userInfo[0].lastname}
                     </p>
                   </nav>
                   <UserMenu redirect={handleRedirect} />

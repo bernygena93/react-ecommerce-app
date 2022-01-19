@@ -1,10 +1,18 @@
+import { useState } from "react";
 import styles from "../styles/productOrdering.module.css";
 
 export default function ProductOrdering() {
+  const [option, setOption] = useState("");
+
+  const handleChange = (e) => {
+    setOption(e.target.value);
+    console.log(option);
+  };
+
   return (
     <div className={styles.container}>
       <p className={styles.title}>Ordenar</p>
-      <select className={styles.select} value="">
+      <select className={styles.select} onChange={handleChange}>
         <option className={styles.option} value="" selected disabled hidden>
           Ordenar por precio
         </option>

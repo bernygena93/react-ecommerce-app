@@ -1,6 +1,6 @@
 import React from "react";
 import LocalShipping from "@material-ui/icons/LocalShipping";
-import styles from "../../pages/styles/detailProducts.module.css";
+import styles from "../../pages/styles/productDetail.module.css";
 
 export default function ProductShipping() {
   return (

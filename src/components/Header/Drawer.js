@@ -6,6 +6,13 @@ import Instagram from "@material-ui/icons/Instagram";
 import Twitter from "@material-ui/icons/Twitter";
 import Clear from "@material-ui/icons/Clear";
 import AccountCircle from "@material-ui/icons/AccountCircle";
+import {
+  Favorite,
+  ShoppingCart,
+  ExitToApp,
+  PersonAdd,
+  ExitToAppOutlined,
+} from "@material-ui/icons";
 import styles from "../styles/drawer.module.css";
 import EcommerceContext from "../../context/EcommerceContext";
 
@@ -44,9 +51,9 @@ export default function Drawer({ drawerToggle, drawerOpen }) {
               <h2 className={styles.menuTitle}>MENÚ</h2>
             ) : (
               <h3 className={styles.menuTitle}>
-                {context.userInfo.name}
+                {context.userInfo[0].name}
                 &nbsp;
-                {context.userInfo.lastname}
+                {context.userInfo[0].lastname}
                 <AccountCircle />
               </h3>
             )}
@@ -59,14 +66,16 @@ export default function Drawer({ drawerToggle, drawerOpen }) {
                   aria-hidden="true"
                   onClick={() => handleRedirect("/register")}
                 >
-                  Crear cuenta
+                  Crear cuenta &nbsp;
+                  <PersonAdd />
                 </li>
                 <li
                   className={styles.drawerLinks}
                   aria-hidden="true"
                   onClick={() => handleRedirect("/login")}
                 >
-                  Iniciar sesión
+                  Iniciar sesión &nbsp;
+                  <ExitToAppOutlined />
                 </li>
               </ul>
             </nav>
@@ -76,23 +85,26 @@ export default function Drawer({ drawerToggle, drawerOpen }) {
                 <li
                   className={styles.drawerLinks}
                   aria-hidden="true"
-                  onClick={() => handleRedirect("/register")}
+                  onClick={() => handleRedirect("/shopping-cart")}
                 >
-                  Mis Favoritos
+                  Carrito de Compras &nbsp;
+                  <ShoppingCart />
                 </li>
                 <li
                   className={styles.drawerLinks}
                   aria-hidden="true"
-                  onClick={() => handleRedirect("/login")}
+                  onClick={() => handleRedirect("/favorites")}
                 >
-                  Mis Reservas
+                  Mis Favoritos &nbsp;
+                  <Favorite />
                 </li>
                 <li
                   className={styles.drawerLinks}
                   aria-hidden="true"
                   onClick={handleLogout}
                 >
-                  Salir
+                  Salir &nbsp;
+                  <ExitToApp />
                 </li>
               </ul>
             </nav>

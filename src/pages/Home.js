@@ -32,53 +32,48 @@ export default function Home() {
     if (products) setLoading(false);
   }, [products]);
 
-  return (
-    // eslint-disable-next-line react/jsx-no-useless-fragment
-    <>
-      {loading ? (
-        <div>
-          <Spinner />
-        </div>
-      ) : (
-        <div className={styles.container}>
-          <Carousel2 renderThumbs={() => false}>
-            {listImages.map((image) => (
-              <div key={image.id + image.url}>
-                <img src={image.url} alt={`Slide - ${image.id}`} />
-              </div>
-            ))}
-          </Carousel2>
-          <InfoHome />
-          <h2>Destacados de esta semana</h2>
-          <MultiCarousel>
-            {products.map((product) => (
-              <ProductCard key={product.id + product.brand} info={product} />
-            ))}
-          </MultiCarousel>
-          <h2>Categorias</h2>
-          <div className={styles.container}>
-            {categories.map((category) => (
-              <CategoryCard info={category} key={category.id + category.name} />
-            ))}
+  return loading ? (
+    <div>
+      <Spinner />
+    </div>
+  ) : (
+    <div className={styles.container}>
+      <Carousel2 renderThumbs={() => false}>
+        {listImages.map((image) => (
+          <div key={image.id + image.url}>
+            <img src={image.url} alt={`Slide - ${image.id}`} />
           </div>
-          <h2>Marcas Oficiales</h2>
-          <MultiCarousel>
-            {brands.map((brand) => (
-              <BrandsCard brand={brand} key={brand.id + brand.name} />
-            ))}
-          </MultiCarousel>
-          <h2>Envio Gratis</h2>
-          <MultiCarousel>
-            {products.map(
-              (product) =>
-                // eslint-disable-next-line implicit-arrow-linebreak
-                product.shipping && (
-                  <ProductCard key={product.id + product.name} info={product} />
-                )
-            )}
-          </MultiCarousel>
-        </div>
-      )}
-    </>
+        ))}
+      </Carousel2>
+      <InfoHome />
+      <h2>Destacados de esta semana</h2>
+      <MultiCarousel>
+        {products.map((product) => (
+          <ProductCard key={product.id + product.brand} info={product} />
+        ))}
+      </MultiCarousel>
+      <h2>Categorias</h2>
+      <div className={styles.container}>
+        {categories.map((category) => (
+          <CategoryCard info={category} key={category.id + category.name} />
+        ))}
+      </div>
+      <h2>Marcas Oficiales</h2>
+      <MultiCarousel>
+        {brands.map((brand) => (
+          <BrandsCard brand={brand} key={brand.id + brand.name} />
+        ))}
+      </MultiCarousel>
+      <h2>Envio Gratis</h2>
+      <MultiCarousel>
+        {products.map(
+          (product) =>
+            // eslint-disable-next-line implicit-arrow-linebreak
+            product.shipping && (
+              <ProductCard key={product.id + product.name} info={product} />
+            )
+        )}
+      </MultiCarousel>
+    </div>
   );
 }

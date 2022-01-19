@@ -6,7 +6,7 @@ import Remove from "@material-ui/icons/Remove";
 import AddShoppingCart from "@material-ui/icons/AddShoppingCart";
 import { Favorite } from "@material-ui/icons";
 import { Rating } from "react-simple-star-rating";
-import styles from "./styles/detailProducts.module.css";
+import styles from "./styles/productDetail.module.css";
 import EcommerceContext from "../context/EcommerceContext";
 import { getProductById } from "../service/productService";
 import Spinner from "../components/Spinner";
@@ -17,7 +17,9 @@ import useFetchApi from "../hooks/useFetchApi";
 import { arsPaymentFormat } from "../utils/functions/formatNumber";
 
 export default function ProductDetail() {
+  const [enabled, setEnabled] = useState(true);
   const [loading, setLoading] = useState(true);
+  const [styleIcon, setStyleIcon] = useState(styles.icon);
   const context = useContext(EcommerceContext);
   const [count, setCount] = useState(0);
   const { id } = useParams();
@@ -34,6 +36,19 @@ export default function ProductDetail() {
     }
   }, [product]);
 
+  const handleFavorites = () => {
+    if (styleIcon === styles.icon) {
+      context.addFavorites({
+        product,
+        amount: 1,
+      });
+      setStyleIcon(styles.iconSelected);
+    } else if (styleIcon === styles.iconSelected) {
+      context.removeFavorites(product._id);
+      setStyleIcon(styles.icon);
+    }
+  };
+
   const countProduct = (op) => {
     if (op === "remove" && count > 0) {
       setCount((prevState) => prevState - 1);
@@ -41,6 +56,11 @@ export default function ProductDetail() {
       setCount((prevState) => prevState + 1);
     }
   };
+
+  useEffect(() => {
+    if (count > 0) setEnabled(false);
+    else setEnabled(true);
+  }, [count]);
 
   const handleShopping = () => {
     context.addToCart({
@@ -59,7 +79,9 @@ export default function ProductDetail() {
         <div className={styles.productHeader}>
           <p className={styles.make}>
             {`${product.make} - ${product.model}`}
-            <Favorite />
+            <div className={styleIcon}>
+              <Favorite onClick={handleFavorites} />
+            </div>
           </p>
           <div className={styles.rating}>
             <Rating size={16} initialValue={product.rating} readonly />
@@ -80,7 +102,7 @@ export default function ProductDetail() {
             <div className={styles.count}>
               <div
                 className={styles.function}
-                aria-hidden="true"
+                aria-hidden
                 onClick={() => countProduct("remove")}
               >
                 <Remove />
@@ -88,7 +110,7 @@ export default function ProductDetail() {
               <p className={styles.result}>{count}</p>
               <div
                 className={styles.function}
-                aria-hidden="true"
+                aria-hidden
                 onClick={() => countProduct("add")}
               >
                 <Add />
@@ -98,6 +120,7 @@ export default function ProductDetail() {
               type="button"
               className={styles.button}
               onClick={handleShopping}
+              disabled={enabled}
             >
               <AddShoppingCart />
               Agregar al carrito

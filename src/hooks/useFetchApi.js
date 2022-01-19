@@ -8,7 +8,6 @@ export default function useFetchApi({ urlApi, payload, header }) {
       try {
         const info = await urlApi(payload, header);
         setData(info.data);
-        console.log(info.data);
       } catch (error) {
         console.error("error al realizar el pedido", error);
       }
