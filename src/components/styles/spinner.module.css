@@ -13,13 +13,12 @@
 .ldsDualRing:after {
   content: " ";
   display: block;
-  width: 80px;
-  height: 80px;
+  width: 2.5rem;
+  height: 2.5rem;
   margin: 8px;
   border-radius: 50%;
-  border: 8px solid #fff;
-  border-color: var(--color-light-blue) transparent var(--color-blue)
-    transparent;
+  border: 5px solid #fff;
+  border-color: var(--color-aqua) transparent var(--color-blue-aqua) transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
 @keyframes lds-dual-ring {

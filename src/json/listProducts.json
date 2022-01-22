@@ -1,235 +1,44 @@
 [
   {
-    "_id": "61cb55037a3dd03e74e21c83",
-    "make": "Motorola",
-    "model": "G7 Power",
-    "user": "61cb44ed63cbcf20f844e181",
-    "price": 35200,
-    "description": "El Motorola Moto G7 Play es la variante más básica de la serie Moto G7. Con una pantalla HD+ de 5.7 pulgadas, el Moto G7 Play tiene un procesador Snapdragon 632 de ocho núcleos, aunque con sólo 2GB de RAM y 32GB de almacenamiento interno. El Moto G7 Play tiene una cámara trasera de 13 MP, mientras que su cámara frontal es de 8 MP y completa sus características con una batería de 3000 mAh, lector de huellas y Android 9.0 Pie.",
-    "stock": 10,
-    "category": "61cb46a14c68aa3c34f41bf3",
+    "brand": {
+      "name": "Lenovo",
+      "logo": [
+        {
+          "_id": "61dc71ae91f163214cf40e27",
+          "url": "https://bandageek1.s3.us-east-2.amazonaws.com/wp-content/uploads/2019/07/19165913/lenovo-logo-design_4x.png"
+        }
+      ],
+      "image": [
+        {
+          "_id": "61dc71ae91f163214cf40e28",
+          "url": "https://www.tuexperto.com/wp-content/uploads/2020/03/apps-ordenadores-lenovo-1200x800.jpg.webp"
+        }
+      ],
+      "__v": 0
+    },
+    "features": "Notebook Lenovo Thinkpad L15 I5 1135g7 8gb Ssd 256gb 3 Años",
+    "user": "61d882a0f6210d3c1070c96c",
+    "price": 128698,
+    "shipping": true,
+    "stock": 7,
+    "category": {
+      "name": "Laptop",
+      "__v": 0
+    },
+    "warranty": 12,
+    "description": "CONSULTE AL VENDEDOR\n\nINSUMOS ACUARIO\n\nMercado Líder PLATINUM\n\n----------------------------------------------------------------\n\n•ZONA DE RETIRO: NOS ENCONTRAMOS EN ZONA COLEGIALES (CABA).\nUBICADOS A POCAS CUADRAS DE AV. ALVAREZ THOMAS Y AV. ELCANO\n\n•HORARIO: LUNES A VIERNES 12 A 18HS.\n\n•FORMAS DE ENVIO:\n- MERCADO ENVÍOS (Correo y otros). Se realizan envíos a todo el país.\nPodés calcular el costo y demora aproximado con tu código postal en el calculador\nque está debajo del precio (ícono del camioncito).\n\n- RÁPIDO A DOMICILIO (FLEX). Envíos en el día con restricción horaria y por zona.\nSi la compra la realizas luego del horario establecido, te llegará al día hábil siguiente.\n\n\n•HACEMOS FACTURA A Y B.\nNO OLVIDE AVISAR POR MENSAJE PRIVADO AL TERMINAR LA COMPRA QUE TIPO DE FACTURA NECESITA:\nA O B (EXENTO, MONOTRIBUTISTA, CONSUMIDOR FINAL). DE NO RECIBIR NINGÚN MENSAJE,\nSE EMITIRÁ CONSUMIDOR FINAL Y NO SE PODRÁ CAMBIAR.\n\nMIRA TODO LO QUE TENEMOS PUBLICADO ACÁ (copia y pega el link):\nhttps://listado.mercadolibre.com.ar/_CustId_68286146\n\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\nPREGUNTAS FRECUENTES\n•LA MERCADERÍA SERÁ ENTREGADA UNA VEZ CORROBORADO EL PAGO Y EL CLIENTE DEBERÁ PRESENTAR DNI.\nTRABAJAMOS CON ENVÍOS A DOMICILIO POR MOTO MENSAJERÍA,\nMERCADO ENVÍOS O EL TRANSPORTE SOLICITADO POR EL CLIENTE A CONSULTAR.\nEL ENVÍO AL TRANSPORTE PODRÍA TENER CARGO SEGÚN LA LEJANÍAS DESDE NUESTRO DEPOSITO.\n\n•NUESTROS PRODUCTOS SON 100% ORIGINALES Y NO VENDEMOS IMITACIONES.\nSON NUEVOS Y VIENEN EN SU CAJA ORIGINAL Y COMPLETA DE FÁBRICA.\nNO HACEMOS PERMUTAS NI TOMAMOS EN PARTE DE PAGO OTROS PRODUCTOS.\n\n¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯\n\nGARANTÍA:\n•LOS PRODUCTOS CON GARANTÍA DESDE LA FECHA DE COMPRA ES CUBIERTA ÚNICAMENTE POR DESPERFECTOS DE FABRICA.\nNO SE ACEPTAN COMPONENTES QUEMADOS, NI PRODUCTOS GOLPEADOS O\nCON SIGNOS DE MALTRATO Y MAL USO.\nSE DEBERÁ ENTREGAR EN LAS MISMAS CONDICIONES QUE FUE ENTREGADO,\nEN PERFECTO ESTADO Y CON SU EMBALAJE ORIGINAL Y COMPLETO.\nLA MERCADERÍA EN GARANTÍA SERÁ TOMADA A CONDICIÓN HASTA SER REVISADA\nPOR NUESTRO SERVICIO TÉCNICO PUDIENDO TOMARSE EL MISMO HASTA 7 DÍAS HÁBILES.\nEL TRANSPORTE HASTA NUESTRO SERVICIO TÉCNICO CORRE POR CUENTA Y\nORDEN DEL USUARIO, ASÍ COMO EL RETIRO DEL MISMO.",
     "images": [
       {
-        "_id": "61cb55037a3dd03e74e21c84",
-        "url": "https://i.blogs.es/7dae03/moto-g7-power-6/1366_2000.jpg"
+        "url": "https://http2.mlstatic.com/D_NQ_NP_830502-MLA45305209587_032021-O.webp"
       },
       {
-        "_id": "61cb55037a3dd03e74e21c85",
-        "url": "https://i.blogs.es/e79b7a/motorola-moto-g7-power/1366_2000.jpg"
+        "url": "https://http2.mlstatic.com/D_NQ_NP_809118-MLA45305202805_032021-O.webp"
       },
       {
-        "_id": "61cb55037a3dd03e74e21c86",
-        "url": "https://i.blogs.es/7dae03/moto-g7-power-6/1366_2000.jpg"
-      },
-      {
-        "_id": "61cb55037a3dd03e74e21c86",
-        "url": "https://http2.mlstatic.com/D_NQ_NP_663063-MLA42074331244_062020-O.webp"
-      },
-      {
-        "_id": "61cb55037a3dd03e74e21c86",
-        "url": "https://http2.mlstatic.com/D_NQ_NP_815501-MLA31622608336_072019-O.webp"
+        "url": "https://http2.mlstatic.com/D_NQ_NP_818396-MLA45305212611_032021-O.webp"
       }
     ],
-    "__v": 0
-  },
-  {
-    "_id": "61cb64a030ac5e3ab06d484f",
-    "make": "Motorola",
-    "model": "E7 Power",
-    "user": "61cb44ed63cbcf20f844e181",
-    "price": 20200,
-    "description": "req.body.description",
-    "stock": 10,
-    "category": "61cb46a14c68aa3c34f41bf3",
-    "images": [
-      {
-        "_id": "61cb64a030ac5e3ab06d4850",
-        "url": "https://i.blogs.es/3a7c39/captura-de-pantalla-2021-02-19-a-las-8.12.59/450_1000.jpg"
-      },
-      {
-        "_id": "61cb64a030ac5e3ab06d4851",
-        "url": "https://boletin.com.mx/wp-content/uploads/2021/05/moto-e7i-power-770x513.jpg"
-      },
-      {
-        "_id": "61cb64a030ac5e3ab06d4852",
-        "url": "https://mla-s2-p.mlstatic.com/726751-MLA41653730559_052020-O.jpg"
-      }
-    ],
-    "__v": 0
-  },
-  {
-    "_id": "61cb653130ac5e3ab06d4854",
-    "make": "Samsung",
-    "model": "A31s",
-    "user": "61cb44ed63cbcf20f844e181",
-    "price": 13200,
-    "description": "req.body.description",
-    "stock": 10,
-    "category": "61cb46a14c68aa3c34f41bf3",
-    "images": [
-      {
-        "_id": "61cb653130ac5e3ab06d4855",
-        "url": "https://i.blogs.es/56c261/galaxy-a31/450_1000.jpg"
-      },
-      {
-        "_id": "61cb653130ac5e3ab06d4856",
-        "url": "https://static.turbosquid.com/Preview/2020/05/08__05_28_50/1w.jpg55C063FB-D4E2-456F-AE42-F895BF2DD7A0Large.jpg"
-      },
-      {
-        "_id": "61cb653130ac5e3ab06d4857",
-        "url": "https://chupacell.com/wp-content/uploads/2020/07/Samsung-Galaxy-A31.jpeg"
-      }
-    ],
-    "__v": 0
-  },
-  {
-    "_id": "61cb65e630ac5e3ab06d4859",
-    "make": "Lenovo",
-    "model": "ThinkPad T14",
-    "user": "61cb44ed63cbcf20f844e181",
-    "price": 160200,
-    "description": "req.body.description",
-    "stock": 10,
-    "category": "61cb55cc7a3dd03e74e21c88",
-    "images": [
-      {
-        "_id": "61cb65e630ac5e3ab06d485a",
-        "url": "https://www.notebookcheck.org/typo3temp/_processed_/7/d/csm_lenovo_1_a7d7bc5384.jpg"
-      },
-      {
-        "_id": "61cb65e630ac5e3ab06d485b",
-        "url": "https://m.media-amazon.com/images/I/71pVuk3tdiL._AC_SY355_.jpg"
-      },
-      {
-        "_id": "61cb65e630ac5e3ab06d485c",
-        "url": "https://www.notebookcheck.org/typo3temp/_processed_/4/c/csm_2001849519_a11c13403d.jpg"
-      }
-    ],
-    "__v": 0
-  },
-  {
-    "_id": "61cb665030ac5e3ab06d485e",
-    "make": "Lenovo",
-    "model": "ThinkPad T430 I7",
-    "user": "61cb44ed63cbcf20f844e181",
-    "price": 185200,
-    "description": "req.body.description",
-    "stock": 10,
-    "category": "61cb55cc7a3dd03e74e21c88",
-    "images": [
-      {
-        "_id": "61cb665030ac5e3ab06d485f",
-        "url": "https://m.media-amazon.com/images/I/51uM3c1eBZL._AC_SX450_.jpg"
-      },
-      {
-        "_id": "61cb665030ac5e3ab06d4860",
-        "url": "https://www.musicorama.gr/prod_files/mat_original/149982dn1592206745.jpg"
-      },
-      {
-        "_id": "61cb665030ac5e3ab06d4861",
-        "url": "https://www.notebookcheck.org/uploads/tx_nbc2/lenoT430s_2.jpg"
-      }
-    ],
-    "__v": 0
-  },
-  {
-    "_id": "61cb674e30ac5e3ab06d4863",
-    "make": "Apple",
-    "model": "MacBook M1",
-    "user": "61cb44ed63cbcf20f844e181",
-    "price": 210200,
-    "description": "req.body.description",
-    "stock": 10,
-    "category": "61cb55cc7a3dd03e74e21c88",
-    "images": [
-      {
-        "_id": "61cb674e30ac5e3ab06d4864",
-        "url": "https://i.blogs.es/bbbcac/macbookpro7/1366_2000.jpg"
-      },
-      {
-        "_id": "61cb674e30ac5e3ab06d4865",
-        "url": "http://s3.amazonaws.com/imagenes-sellers-mercado-ripley/2021/04/14161722/6771.jpg"
-      },
-      {
-        "_id": "61cb674e30ac5e3ab06d4866",
-        "url": "https://m.media-amazon.com/images/I/41C8eAD6VrL._AC_SX466_.jpg"
-      }
-    ],
-    "__v": 0
-  },
-  {
-    "_id": "61cb680630ac5e3ab06d4868",
-    "make": "Pc Gamer AMD",
-    "model": "A10 9700 R7",
-    "user": "61cb44ed63cbcf20f844e181",
-    "price": 70200,
-    "description": "req.body.description",
-    "stock": 10,
-    "category": "61cb55dc7a3dd03e74e21c8a",
-    "images": [
-      {
-        "_id": "61cb680630ac5e3ab06d4869",
-        "url": "https://http2.mlstatic.com/D_763530-MLA32272693058_092019-F.webp"
-      },
-      {
-        "_id": "61cb680630ac5e3ab06d486a",
-        "url": "https://www.quonty.com/blog/wp-content/uploads/2020/02/tienda-online-de-informatica-y-tecnologia-14.jpg"
-      },
-      {
-        "_id": "61cb680630ac5e3ab06d486b",
-        "url": "https://http2.mlstatic.com/D_NQ_NP_936303-MLA29645494633_032019-O.jpg"
-      }
-    ],
-    "__v": 0
-  },
-  {
-    "_id": "61cb687b30ac5e3ab06d486d",
-    "make": "Pc Gamer Intel",
-    "model": "Core I5-9400",
-    "user": "61cb44ed63cbcf20f844e181",
-    "price": 62600,
-    "description": "req.body.description",
-    "stock": 10,
-    "category": "61cb55dc7a3dd03e74e21c8a",
-    "images": [
-      {
-        "_id": "61cb687b30ac5e3ab06d486e",
-        "url": "https://www.cybermarket.pe/wp-content/uploads/2021/08/Pc-Gamer-2.jpg"
-      },
-      {
-        "_id": "61cb687b30ac5e3ab06d486f",
-        "url": "https://http2.mlstatic.com/D_NQ_NP_636760-MLM45481959098_042021-O.jpg"
-      },
-      {
-        "_id": "61cb687b30ac5e3ab06d4870",
-        "url": "https://blog.soltekonline.com/content/images/2019/08/00000.jpg"
-      }
-    ],
-    "__v": 0
-  },
-  {
-    "_id": "61cb691b30ac5e3ab06d4872",
-    "make": "Pc Gamer AMD",
-    "model": "Ryzen 5 3400g",
-    "user": "61cb44ed63cbcf20f844e181",
-    "price": 90650,
-    "description": "req.body.description",
-    "stock": 10,
-    "category": "61cb55dc7a3dd03e74e21c8a",
-    "images": [
-      {
-        "_id": "61cb691b30ac5e3ab06d4873",
-        "url": "https://http2.mlstatic.com/D_NQ_NP_946386-MLA44217276177_122020-O.jpg"
-      },
-      {
-        "_id": "61cb691b30ac5e3ab06d4874",
-        "url": "https://www.maximus.com.ar/Temp/App_WebSite/App_PictureFiles/Items/PC-Armada-Baja-002_800.jpg"
-      },
-      {
-        "_id": "61cb691b30ac5e3ab06d4875",
-        "url": "https://battler.gg/wp-content/uploads/2021/04/comprar-pc-gamer-2021-battler.jpg"
-      }
-    ],
+    "ratings": [],
     "__v": 0
   }
 ]

@@ -14,15 +14,16 @@ import GlobalState from "./context/GlobalState";
 import ProductsFiltered from "./pages/ProductsFiltered";
 import ShoppingCart from "./pages/ShoppingCart";
 import FavoritesProducts from "./pages/FavoritesProducts";
+import ProductSale from "./pages/ProductSale";
 
 function App() {
   const [drawerOpen, setDrawerOpen] = useState(false);
-
   const toggle = (previous) => !previous;
 
   const drawerToggleClickHandler = () => {
     setDrawerOpen(toggle);
   };
+
   return (
     <div>
       <GlobalState>
@@ -43,6 +44,7 @@ function App() {
             />
             <Route path="/shopping-cart" element={<ShoppingCart />} />
             <Route path="/favorites" element={<FavoritesProducts />} />
+            <Route path="/product-sale" element={<ProductSale />} />
           </Routes>
           <Footer />
         </BrowserRouter>

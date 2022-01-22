@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import { Favorite } from "@material-ui/icons";
 import ShoppingCard from "../components/Card/ShoppingCard";
 import styles from "./styles/shopping.module.css";
 import EcommerceContext from "../context/EcommerceContext";
@@ -17,6 +18,10 @@ export default function FavoritesProducts() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.header}>
+        <Favorite />
+        &nbsp; Mis favoritos
+      </div>
       {!products || products.length === 0 ? (
         <p>No tienes productos favoritos</p>
       ) : (

@@ -3,8 +3,8 @@ import ArrowBackIos from "@material-ui/icons/ArrowBackIosSharp";
 import ArrowForwardIos from "@material-ui/icons/ArrowForwardIos";
 import styles from "./styles/multiCarousel.module.css";
 
-export default function MultiCarousel({ children }) {
-  const [position, setPosition] = useState(0);
+export default function MultiCarousel({ children, positionInitial }) {
+  const [position, setPosition] = useState(positionInitial || 0);
   const style = {
     translate: {
       transform: `translate(${position}%, 0%)`,

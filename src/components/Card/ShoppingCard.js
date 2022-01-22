@@ -15,7 +15,7 @@ export default function ShoppingCard({ handleDelete, product }) {
         />
       </div>
       <div className={styles.info}>
-        <p className={styles.model}>{product.product.model}</p>
+        <p className={styles.model}>{product.product.features}</p>
         <div className={styles.amountContainer}>
           {pathname === "/shopping-cart" && (
             <div className={styles.amount}>

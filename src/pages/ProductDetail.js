@@ -30,7 +30,8 @@ export default function ProductDetail() {
   const [price, setPrice] = useState(0);
 
   useEffect(() => {
-    if (product) {
+    window.scrollTo(0, 0);
+    if (product.price) {
       setPrice(arsPaymentFormat(product.price));
       setLoading(false);
     }
@@ -70,7 +71,7 @@ export default function ProductDetail() {
   };
 
   return loading ? (
-    <div>
+    <div className={styles.spinnerContainer}>
       <Spinner />
     </div>
   ) : (
@@ -78,7 +79,7 @@ export default function ProductDetail() {
       <div className={styles.card}>
         <div className={styles.productHeader}>
           <p className={styles.make}>
-            {`${product.make} - ${product.model}`}
+            {product.features}
             <div className={styleIcon}>
               <Favorite onClick={handleFavorites} />
             </div>
@@ -93,7 +94,10 @@ export default function ProductDetail() {
               </div>
             ))}
           </Carousel>
-          {window.innerWidth > 1279 && <ProductDescription product={product} />}
+          <ProductDescription
+            product={product}
+            styleContainer={styles.descriptionContainer}
+          />
         </div>
         <div className={styles.containerProduct}>
           <p className={styles.price}>{price}</p>
@@ -126,9 +130,10 @@ export default function ProductDetail() {
               Agregar al carrito
             </button>
             <ProductWarranty />
-            {window.innerWidth < 1280 && (
-              <ProductDescription product={product} />
-            )}
+            <ProductDescription
+              product={product}
+              styleContainer={styles.descriptionContainerMobile}
+            />
           </div>
         </div>
       </div>

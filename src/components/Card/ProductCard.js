@@ -44,7 +44,7 @@ export default function ProductCard({ info }) {
           <img src={info.images[0].url} alt="" />
         </div>
         <div className={styles.bodyCard}>
-          <p className={styles.info}>{info.model}</p>
+          <p className={styles.info}>{info.features}</p>
           <p className={styles.price}>{price}</p>
           <small className={styles.offers}>
             {`12 x ${amountPayment}

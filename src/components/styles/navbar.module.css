@@ -11,12 +11,19 @@
   border: 1px solid var(--color-dark);
   gap: 4%;
   padding: 0% 3%;
+  position: fixed;
+  top: 0%;
+  z-index: 1000;
 }
 .navbar2 {
+  top: 11vh;
   height: 6vh;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
 }
 .optionNavbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 6vh;
   cursor: pointer;
   position: relative;
@@ -77,6 +84,9 @@ p {
     align-items: center;
     width: 30%;
     gap: 20%;
+  }
+  .navbar2 {
+    font-size: 0.9rem;
   }
   .buttonNav {
     padding: 0.5rem 0.5rem;

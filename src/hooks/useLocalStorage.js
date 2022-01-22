@@ -10,7 +10,6 @@ const useLocalStorage = (itemName) => {
   }, [value, itemName]);
 
   const removeItem = (item) => {
-    setValue([]);
     localStorage.removeItem(item);
   };
 

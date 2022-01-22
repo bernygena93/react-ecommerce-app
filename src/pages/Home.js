@@ -18,6 +18,7 @@ import useFetchApi from "../hooks/useFetchApi";
 import MultiCarousel from "../components/MultiCarousel";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
   const products = useFetchApi({
     urlApi: getAllProducts,
   });
@@ -27,13 +28,14 @@ export default function Home() {
   const brands = useFetchApi({
     urlApi: getAllBrands,
   });
-  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    if (products) setLoading(false);
+    window.scrollTo(0, 0);
+    if (products.length > 0) setLoading(false);
   }, [products]);
 
   return loading ? (
-    <div>
+    <div className={styles.spinnerContainer}>
       <Spinner />
     </div>
   ) : (
@@ -47,7 +49,7 @@ export default function Home() {
       </Carousel2>
       <InfoHome />
       <h2>Destacados de esta semana</h2>
-      <MultiCarousel>
+      <MultiCarousel positionInitial={-45}>
         {products.map((product) => (
           <ProductCard key={product.id + product.brand} info={product} />
         ))}
@@ -59,20 +61,19 @@ export default function Home() {
         ))}
       </div>
       <h2>Marcas Oficiales</h2>
-      <MultiCarousel>
+      <MultiCarousel positionInitial={-70}>
         {brands.map((brand) => (
           <BrandsCard brand={brand} key={brand.id + brand.name} />
         ))}
       </MultiCarousel>
       <h2>Envio Gratis</h2>
-      <MultiCarousel>
-        {products.map(
-          (product) =>
+      <MultiCarousel positionInitial={-45}>
+        {products
+          .filter((product) => product.shipping)
+          .map((product) => (
             // eslint-disable-next-line implicit-arrow-linebreak
-            product.shipping && (
-              <ProductCard key={product.id + product.name} info={product} />
-            )
-        )}
+            <ProductCard key={product.id + product.name} info={product} />
+          ))}
       </MultiCarousel>
     </div>
   );

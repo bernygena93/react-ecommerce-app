@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  height: 7rem;
+  background-color: var(--color-white);
+}
+.imgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.imgContainer img {
+  height: 75%;
+}
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+  overflow: hidden;
+}
+.text {
+  display: none;
+}

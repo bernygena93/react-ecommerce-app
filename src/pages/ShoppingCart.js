@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { Payment } from "@material-ui/icons/";
+import { Payment, ShoppingCartOutlined } from "@material-ui/icons/";
 import ShoppingCard from "../components/Card/ShoppingCard";
 import { arsPaymentFormat } from "../utils/functions/formatNumber";
 import styles from "./styles/shopping.module.css";
@@ -24,6 +24,10 @@ export default function ShoppingCart() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.header}>
+        <ShoppingCartOutlined />
+        &nbsp; Mi carrito de compras
+      </div>
       {!products || products.length === 0 ? (
         <p>No tienes productos en el carrito</p>
       ) : (

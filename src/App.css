@@ -26,7 +26,11 @@
   --color-special: #04eb61;
   --color-red: red;
 }
+::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   background-color: var(--color-light-gray);
+  padding-top: 17vh;
 }

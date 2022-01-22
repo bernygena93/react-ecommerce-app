@@ -26,7 +26,7 @@ export default function ProductFilteredCard({ product }) {
         <img src={product.images[0].url} alt={product.images[0].id} />
       </div>
       <div className={styles.infoContainer}>
-        <div className={styles.model}>{product.model}</div>
+        <div className={styles.model}>{product.features}</div>
         <div>
           {product.shipping ? (
             <p className={styles.shipping}>Envio Gratis</p>

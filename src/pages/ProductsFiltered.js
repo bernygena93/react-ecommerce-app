@@ -1,7 +1,7 @@
 import { useParams } from "react-router";
-import BrandList from "../components/BrandList";
+import BrandList from "../components/List/BrandList";
 import ProductFilteredCard from "../components/Card/ProductFilteredCard";
-import ProductOrdering from "../components/Product/ProductOrdering";
+import ProductSorting from "../components/Product/ProductSorting";
 import useFetchApi from "../hooks/useFetchApi";
 import {
   getProductByBrand,
@@ -34,12 +34,12 @@ export default function ProductsFiltered() {
           </p>
         </div>
         <div className={styles.orderContainer}>
-          <ProductOrdering products={products} />
+          <ProductSorting products={products} />
         </div>
         <div className={styles.brandContainer}>
           <p className={styles.name}>Marcas</p>
           {products.map((product) => (
-            <BrandList brand={product.make} />
+            <BrandList brand={product.brand.name} />
           ))}
           <button className={styles.button} type="button">
             Filtrar

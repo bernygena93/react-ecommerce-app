@@ -4,7 +4,7 @@
   position: relative;
 }
 .carouselInner {
-  overflow: hidden;
+  overflow: auto;
 }
 .cardContainer {
   display: flex;
